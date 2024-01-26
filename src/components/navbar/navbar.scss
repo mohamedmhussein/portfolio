@@ -1,0 +1,26 @@
+.navbar {
+    height: 100px;
+    .wrapper {
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        span {
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+
+            // & > * {
+            //     /* Styles for all direct children of .myContainer */
+            //     width: 18px;
+            //     height: 18px;
+            //   }
+        }
+    }
+}
