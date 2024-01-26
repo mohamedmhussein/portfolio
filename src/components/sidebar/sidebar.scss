@@ -10,8 +10,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 400px;
-        height: 30px;
+        bottom: 0;
+        width: 300px;
         background-color: white;
 
 
@@ -26,7 +26,7 @@
             position: absolute;
 
             a {
-                font-size: 40px;
+                font-size: 30px;
             }
 
         }
@@ -41,6 +41,9 @@
         left: 25px;
         background-color: transparent;
         border: none;
+        cursor: pointer;
+        // centers the burger lines
+        padding-top: 8px; 
 
     }
 }
