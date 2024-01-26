@@ -12,15 +12,9 @@
             font-weight: bold;
         }
 
-        .links {
+        .social {
             display: flex;
             gap: 20px;
-
-            // & > * {
-            //     /* Styles for all direct children of .myContainer */
-            //     width: 18px;
-            //     height: 18px;
-            //   }
         }
     }
 }
