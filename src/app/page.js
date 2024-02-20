@@ -2,6 +2,7 @@ import "./page.scss"
 import { Navbar } from "@/components/navbar/Navbar"
 import Hero from "@/components/hero/Hero"
 import Parallax from "@/components/parallax/Parallax"
+import Services from "@/components/services/Services"
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
         <Parallax  title='services'/>
       </section>
       
-      <section>Services</section>
+      <section>
+        <Services />
+      </section>
 
       <section>
         <Parallax  title='portfolio'/>
