@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar/Navbar"
 import Hero from "@/components/hero/Hero"
 import Parallax from "@/components/parallax/Parallax"
 import Services from "@/components/services/Services"
+import Portfolio from "@/components/portfolio/Portfolio"
 
 export default function Home() {
   return (
@@ -24,10 +25,10 @@ export default function Home() {
       <section>
         <Parallax  title='portfolio'/>
       </section>
+
+      <Portfolio />
       
-      <section>portfolio2</section>
-      <section>portfolio3</section>
-      <section id="Contact">Contat</section>
+      <section id="Contact">Contact</section>
     </div>
   )
 }
