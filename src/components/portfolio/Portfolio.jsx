@@ -10,7 +10,7 @@ const SingleProject = ({project}) => {
         target: ref,
         // offset: ["start start", "end start"]
     })
-    const y = useTransform(scrollYProgress, [0,1], ["-100%", "100%"])
+    const y = useTransform(scrollYProgress, [0,1], ["-50%", "50%"])
   return (
     <section >
         <div className="container">
@@ -19,7 +19,7 @@ const SingleProject = ({project}) => {
                     <img src={project.img} alt="" />
                 </div>
                 
-                <motion.div className="textContainer" style={{y: y}} transition={{ease: "easeInOut"}} >
+                <motion.div className="textContainer" style={{y: y}}  >
                     <h2>{project.title}</h2>
                     <p>{project.desc}</p>
                     <button>Live Demo</button>

@@ -24,3 +24,19 @@ export const projects = [
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
     },
   ];
+export const contact = [
+  {
+    title: 'Email',
+    input: 'mohamedmhussein@protonmail.com'
+  },
+
+  {
+    title: 'Location',
+    input: 'London, ON, Canada'
+  },
+
+  {
+    title: 'Phone',
+    input: '+1 (519) 760-1559'
+  }
+]
