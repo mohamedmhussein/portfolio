@@ -34,7 +34,7 @@ const Hero = () => {
         x: '-250%',
         transition: {
             repeat: Infinity,
-            duration: 20,
+            duration: 15,
             repeatType: 'mirror'
         }
     }
@@ -47,8 +47,8 @@ const Hero = () => {
                 <motion.h2 variants={textVariants}>MOHAMMAD EL PRINCE</motion.h2>
                 <motion.h1 variants={textVariants}>Full-Stack <br />Web Developer</motion.h1>
                 <motion.div className="buttons" variants={textVariants}>
-                    <motion.button variants={textVariants}>See My Work</motion.button>
-                    <motion.button variants={textVariants}>Contact Me</motion.button>
+                    <motion.button variants={textVariants} className='seeMyWork'>See My Work</motion.button>
+                    <motion.button variants={textVariants} className='contactMe'>Contact Me</motion.button>
                 </motion.div>
                 <motion.img variants={textVariants} src="/scroll.png" alt="" animate='scrollButton' />
             </motion.div>
