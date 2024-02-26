@@ -2,6 +2,8 @@
 import './contact.scss'
 import {contact} from '../../app/data'
 import {motion} from 'framer-motion'
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 
 const Contact = () => {
 
@@ -18,6 +20,26 @@ const Contact = () => {
             staggerChildren: 0.1,
           },
         },
+      };
+    
+    const formRef = useRef()
+    const [error, setError] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .sendForm('service_wu98m2f', 'template_uxvoebn', formRef.current, {
+            publicKey: 'XHM38tfM4cFjaIgaE',
+          })
+          .then(
+            () => {
+              setSuccess(true)
+            },
+            (error) => {
+                setError(true)
+            },
+          );
       };
   return (
     <motion.div className='contact' variants = {variants} initial = 'initial' whileInView="animate">
@@ -64,14 +86,18 @@ const Contact = () => {
                     </svg>
                 </motion.div>
             <motion.form
+            ref = {formRef}
+            onSubmit={sendEmail}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 3.7, duration: 1 }}
             >
-                <input type="text" required placeholder='Name' />
-                <input type="email" required placeholder='Email' />
-                <textarea rows="8" placeholder='Message'/>
+                <input type="text" required placeholder='Name' name='user_name' />
+                <input type="email" required placeholder='Email' name='user_email' />
+                <textarea rows="8" placeholder='Message' name='message'/>
                 <button>Submit</button>
+                {error && 'Error! Please try again'}
+                {success && 'Thank you! I will get back to you so soon!'}
             </motion.form>
         </motion.div>
     </motion.div>
