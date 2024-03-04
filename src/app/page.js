@@ -20,19 +20,19 @@ export default function Home() {
         <Parallax  title='services'/>
       </section>
       
-      {/* <section>
+      <section>
         <Services />
-      </section> */}
+      </section>
 
-      {/* <section id="Portfolio">
+      <section id="Portfolio">
         <Parallax  title='portfolio'/>
-      </section> */}
+      </section>
 
-      {/* <Portfolio /> */}
+      <Portfolio />
       
-      {/* <section id="Contact">
+      <section id="Contact">
         <Contact />
-      </section> */}
+      </section>
       
     </div>
   )
